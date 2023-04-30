@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Phpolar\CsrfProtection\Tests\Stubs;
+namespace Phpolar\HttpMessageTestUtils;
 
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
