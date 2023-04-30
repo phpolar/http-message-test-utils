@@ -95,6 +95,7 @@ final class MemoryStreamStub implements StreamInterface
 
     public function write($string): int
     {
-        return fwrite($this->memoryStream, $string);
+        $writttenBytes = fwrite($this->memoryStream, $string);
+        return $writttenBytes !== false ? $writttenBytes : 0;
     }
 }
