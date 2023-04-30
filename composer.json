@@ -1,0 +1,21 @@
+{
+    "name": "phpolar/http-message-test-utils",
+    "description": "A PSR-7 Http Message Stub Library",
+    "type": "library",
+    "require": {
+        "psr/http-message": "^2.0",
+        "psr/http-factory": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phpolar\\HttpMessageTestUtils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eric Fortmeyer",
+            "email": "e.fortmeyer01@gmail.com"
+        }
+    ]
+}
