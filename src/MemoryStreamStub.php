@@ -21,7 +21,7 @@ final class MemoryStreamStub implements StreamInterface
         $this->rewind();
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return stream_get_contents($this->memoryStream);
     }
