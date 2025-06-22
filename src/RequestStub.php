@@ -11,6 +11,7 @@ use Psr\Http\Message\UriInterface;
 
 final class RequestStub implements ServerRequestInterface
 {
+    private array $headers = [];
     private UriInterface $uri;
 
     public function __construct(
@@ -44,7 +45,7 @@ final class RequestStub implements ServerRequestInterface
 
     public function getHeader($name): array
     {
-        throw new Exception("Not Implemented");
+        return $this->headers[$name];
     }
 
     public function getHeaderLine($name): string
@@ -125,7 +126,8 @@ final class RequestStub implements ServerRequestInterface
 
     public function withHeader($name, $value): static
     {
-        throw new Exception("Not Implemented");
+        $this->headers[$name][] = $value;
+        return $this;
     }
 
     public function withMethod($method): static
